@@ -17,7 +17,7 @@ namespace Applications2Matrices
         int total = 0;
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
-                if(arr[i,j] < 500 || arr[i,j] > 100){
+                if(arr[i,j] < 500 && arr[i,j] > 100){
                     total++;
                 }
             }
