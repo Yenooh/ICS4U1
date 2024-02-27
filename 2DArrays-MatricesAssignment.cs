@@ -53,6 +53,11 @@ namespace MatrixAssignment
           Console.WriteLine();
         }
       Console.WriteLine();
+      Console.WriteLine("When can this be used in the real world?");
+      Console.WriteLine("This could be used in coordinate systems and cartesian spaces.");
+      Console.WriteLine("Multiplying transformation matrices allows you to efficiently compute the overall transformation from one coordinate system to another.");
+      Console.WriteLine("To figure out where the hand ends up after moving all the joints, a robot multiplies matrices together. It tells a robot where its hand is in relation to where it started on the plane.");
+      Console.WriteLine();
     }
     public static void multiplyMatrixByConstant(int[,] mat){  
       int r = mat.GetLength(0);
