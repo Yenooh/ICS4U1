@@ -1,6 +1,6 @@
 using System;
 
-namespace 2darraysassignment
+namespace MatrixAssignment
 {
   class Program
   {
