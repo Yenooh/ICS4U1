@@ -1,6 +1,6 @@
 using System;
 
-namespace Applications2MatricesQ3
+namespace 2darraysassignment
 {
   class Program
   {
