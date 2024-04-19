@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
-namespace RecursionAlgorithmsAssignment
+namespace Application4Set1Q4
 {
   class Program
   {
