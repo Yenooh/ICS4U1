@@ -43,10 +43,6 @@ namespace Applications4Set1Q1
         a[i] = int.Parse(Console.ReadLine());
       }
       Console.WriteLine("The number of elements that have the digits have a sum of 10 is " + search(a,0,0));
-      /*for(int i = 0; i < n; i++){
-        Console.Write(a[i] + " ");
-      }*/
-
     }
   }
 }
