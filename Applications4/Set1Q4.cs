@@ -1,48 +1,45 @@
 using System;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.Reflection.Metadata;
 
-namespace Applications4Set1Q1
+namespace RecursionAlgorithmsAssignment
 {
   class Program
-  { 
-    public static int sum(int a, int b){
-      if(a!=0){
-        b += a%10;
-        Console.WriteLine(b + " ");
-        a = a/10;
-        return sum(a, b);
-      }
-      else{
+  {
+    public static int Add(int a, int b){
+      if(a==0){
         return b;
       }
+      else{
+        b += a%10;
+        return Add(a/10,b);
+      }
     }
-    public static int search(int[] a, int i, int count){
+    public static int count(int[] a, int i, int counter){
       if(i == a.Length){
-        return count;
+        return counter;
       }
       else{
-        int sums = sum(a[i],0);
-        if(sums == 10){
-          count++;
-          return search(a,i+1,count);
+        int sum = Add(a[i], 0);
+        if(sum == 10){
+          return count(a,i+1,counter+1);
         }
         else{
-          return search(a,i+1,count);
+          return count(a,i+1,counter);
         }
       }
     }
     static void Main(string[] args)
     {
-      Console.WriteLine("Enter Size of Array: ");
+      Console.WriteLine("Enter n:");
       int n = int.Parse(Console.ReadLine());
-      int[] a = new int[n];
-      for(int i = 0; i < n; i++){
-        Console.WriteLine("Enter Value " + (i+1) + ": ");
+      int[] a = new int [n];
+      for (int i = 0; i < n; i++){
+        Console.WriteLine ("Enter value " + (i+1) + ": ");
         a[i] = int.Parse(Console.ReadLine());
       }
-      Console.WriteLine("The number of elements that have the digits have a sum of 10 is " + search(a,0,0));
+      Console.WriteLine(count(a,0,0) +" have a sum of 10");
+      
     }
   }
 }
