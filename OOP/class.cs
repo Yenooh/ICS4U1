@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Reflection.Metadata;
 
-namespace Applications3Q3
+namespace OOPassignment
 {
     class Car{
         
@@ -37,6 +37,7 @@ namespace Applications3Q3
             get { return price; }
             set { price = value; }
         }
+        
         public Car(){
             carID = 0;
             VIN = "";
@@ -44,6 +45,23 @@ namespace Applications3Q3
             model = "";
             year = 0;
             price = 0.00;
+        }
+    }
+
+    class Search{
+        private int searchCount;
+        public int SearchCount{
+            get { return searchCount; }
+            set { searchCount = value; }
+        }
+
+        public int searchMake;
+        public int SearchMake{
+            get { return searchMake; }
+            set { searchMake = value; }
+        }
+        public Search(){
+            searchCount = 1;
         }
     }
 
